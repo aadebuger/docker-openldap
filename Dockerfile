@@ -9,7 +9,7 @@ RUN apt-get update && \
         slapd=${OPENLDAP_VERSION}* && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-
+run apt-get update
 run apt-get install ldap-utils
 RUN mv /etc/ldap /etc/ldap.dist
 
