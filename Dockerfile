@@ -10,6 +10,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+run apt-get install ldap-utils
 RUN mv /etc/ldap /etc/ldap.dist
 
 COPY modules/ /etc/ldap.dist/modules
